@@ -1,5 +1,6 @@
 # Paper & Garden
 Paper &amp; Garden, A World Building Resource for Storytellers
+
 ![logo]()
 
 Introduction
