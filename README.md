@@ -1,7 +1,7 @@
 # Paper & Garden
 Paper &amp; Garden, A World Building Resource for Storytellers
 
-![logo]()
+![logo](https://github.com/taylormleigh/PaperGarden/blob/master/client/dist/builderlogo.png)
 
 Introduction
 e.g. This project was a brief 2-day sprint where I tried to complete an MVP for an external user
