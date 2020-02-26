@@ -62,17 +62,17 @@ h1 {
   /* font-family: Cormorant Upright; */
   font-size: 37px;
   letter-spacing: -0.2vh;
-  background: linear-gradient(to right, #bd86fcda, #f3eaa8, #9dc4f8);
+  background: linear-gradient(to right, #bd86fcda, #f3eaa8, #a3bedc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 h2 {
   font-family:  Josefin Sans Light;
-  font-size: 28px; */
+  font-size: 25px; */
   letter-spacing: -0.2vh;
   margin-bottom: -10px;
-  background: linear-gradient(to left, #ae80de, #fbe3c2);
+  background: linear-gradient(to left, #e0755c, #f3eaa8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -105,7 +105,7 @@ input, textarea {
   margin-bottom: 30px;
   width: 300px;
   /* font-style: italic; */
-  color: #bff5ff;
+  color: #beddff;
   background-color: rgba(230, 230, 250, 0);
   /* box-shadow:  none; */
   padding: 6px; 
@@ -113,14 +113,14 @@ input, textarea {
   border-left: 0px;
   border-right: 0px;
   border-bottom: 2px solid;
-  border-image: linear-gradient(to right, #ba8afc, rgba(165, 253, 241, 0.375), rgba(230, 230, 250, 0.075));
+  border-image: linear-gradient(to right, #ba8afc, #cdeafdd0, rgba(230, 230, 250, 0.075));
   border-image-slice: 60 30;
   overflow: hidden;
 }
 
 
 ::-webkit-input-placeholder {
-  color: #95ebe4ab;
+  color: #a3bedc;
   font-style: italic;
   font-size: 16px;
 }
@@ -145,12 +145,11 @@ input, textarea {
 
 button {
   font-family: Josefin Sans Light;
-  color: worldView
   border-radius:  3px;
   border-width: 0px;
   padding: 10px;
   margin-top: 20px;
-  background-color: rgba(149, 246, 235, 0.375);
+  background-color: #a3bedc;
   /* background-image: linear-gradient(to right, #ab7aef, rgba(53, 14, 105, 0.623)); */
   color:  rgba(100, 75, 125);
 }
@@ -164,13 +163,14 @@ button:hover {
 }
 
 .dropdown {
-  font-family: Josefin Sans;
-  color: #bff0f0;
+  /* font-family: Josefin Sans; */
+  font-family: Cormorant Upright;
+  color: #beddff;
   border: none;
   font-size: 16px;
   margin-top: 5px;
   margin-bottom: 25px;
   width: 20%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.08);
   height: 30px;
 }

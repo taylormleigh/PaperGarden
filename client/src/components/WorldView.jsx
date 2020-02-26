@@ -4,7 +4,7 @@ export default function WorldView({worldView, click}) {
   if (worldView) {
     return (
       <div className="worldViewOpen">
-        <h1>World Info Stuff</h1>
+        <h2>World Info Stuff</h2>
         <ul> Region 1
           <li>City A</li>
           <li>City B</li>

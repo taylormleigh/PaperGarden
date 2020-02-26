@@ -29,43 +29,6 @@ export default function F2({worldName}) {
         <option value = "7">Aquatic</option>
       </select>
       <br />
-      <h2>FLORA & FAUNA</h2>
-      <br />... coming soon ...
-      <br />
-      <h2>TECHNOLOGY</h2>
-      <br />... coming soon ...
-      <h2>FOOD AND WASTE</h2>
-      <br />... coming soon ...
-      <br />
-      <h2>RELIGION</h2>
-      <br />... coming soon ...
-      <br />
-      <h2>WAR</h2>
-      <br /> ... coming soon ...
-      <br />
-      <h2>HISTORY</h2>
-      <br /> ... coming soon ...
-      <br />
-      <h2>MEDICAL</h2>
-      <br /> ... coming soon ...
-      <br />
-      <h2>LANGUAGE</h2>
-      <br /> ... coming soon ...
-      <br />
-      <h2>REGIONAL GOVERNMENT</h2>
-      <br /> ... coming soon ...
-      <br />
-      <h2>EDUCATION</h2>
-      <br /> ... coming soon ...
-      <br />
-      <h2>ENTERTAINMENT</h2>
-      <br /> ... coming soon ...
-      <br />
-      <h2>ECONOMY</h2>
-      <br /> ... coming soon ...
-      <br />
-      <h2>CULTURE</h2>
-      <br /> ... coming soon ...
     </div>
   )
 }

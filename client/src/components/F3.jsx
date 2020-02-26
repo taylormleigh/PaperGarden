@@ -4,8 +4,7 @@ export default function F3() {
   return (
     <div id="F3">
       <h1>NEW CITY</h1>
-      <br />
-      Add a new city to *Region*
+      <h3>Add a new city to *Region*</h3>
       <br />
       Name your city
       <br />
