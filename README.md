@@ -19,7 +19,7 @@ Technical Challenges and research that you anticipated
 * What did you learn?
 
 ### Challenges that were unexpected
-* Why was it a challenge
+* Had to quickly learn React Hooks and how to create custom hooks
 * What did you learn?
 
 ### Video Demo / Screen shot walkthrough of the app

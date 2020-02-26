@@ -1,6 +1,7 @@
 import React from 'react';
+// import useSignUpForm from '../CustomHooks';
 
-export default function F2({worldName}) {
+export default function F2({newCity, newRegion, inputs, handleInputChange, handleSubmit}) {
   return (
     <div id="F2">
       <h1>NEW REGION</h1>
@@ -29,6 +30,7 @@ export default function F2({worldName}) {
         <option value = "7">Aquatic</option>
       </select>
       <br />
+      <button onClick={newCity}>NEW CITY</button>  |   <button type="submit">SAVE</button>  |  <button onClick={newRegion}>NEW REGION</button>
     </div>
   )
 }
