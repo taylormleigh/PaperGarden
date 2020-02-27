@@ -6,17 +6,21 @@ import Results from './Results.jsx';
 import useSignUpForm from '../CustomHooks';
 import axios from 'axios';
 
-export default function Form({form, newRegion, newCity}) {
+export default function Form({done, form, newRegion, newCity}) {
 //callback function for useSignUpForm hook
 const signup = () => {
   // alert(`${inputs.worldName} has been saved`)
   var world = inputs;
   axios.post('http://localhost:4321/worlds', world)
   .then((res) => {
-    // console.log("form.jsx axios post: ", world);
+    console.log("form.jsx axios post: ", world);
+    done();
     // console.log(res);
   })
-  .catch((err) => {console.error('--> jeepers: ', err);})
+  .catch((err) => {
+    console.error('--> jeepers: ', err);
+    // alert("There was a problem adding your world, make sure it doesn't have the same name as a previously created world");
+  })
 }
 //initializes the custom form hook
 const {inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);

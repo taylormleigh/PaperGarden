@@ -134,6 +134,7 @@ class App extends React.Component {
             newWorld={this.newWorld}
             goHome={this.homeButton}/>
           <Form 
+            done={this.worldList}
             form={this.state.form}
             newRegion={this.newRegion}
             newCity={this.newCity}/>
@@ -167,6 +168,7 @@ class App extends React.Component {
             newWorld={this.newWorld}
             goHome={this.homeButton}/>
           <Form 
+            done={this.worldList}
             form={this.state.form}
             newRegion={this.newRegion}
             newCity={this.newCity}/>
