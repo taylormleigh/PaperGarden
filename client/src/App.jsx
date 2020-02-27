@@ -20,7 +20,6 @@ class App extends React.Component {
       worlds: []
     }
 
-    this.done = this.done.bind(this);
     this.login = this.login.bind(this);
     this.worldList = this.worldList.bind(this);
     this.homeButton = this.homeButton.bind(this);
@@ -43,16 +42,6 @@ class App extends React.Component {
     .catch((err) => {console.error("--> ruh roh: ", err)});
   }
 
-  //starts the form over again AKA Create New World
-  done(){
-    // this.save();
-
-    this.setState({
-      form: 4,
-      worldList: false,
-      home: false
-    })
-  }
 
   //creates a user for new users/logs in existing users
   login(){
@@ -146,9 +135,6 @@ class App extends React.Component {
             goHome={this.homeButton}/>
           <Form 
             form={this.state.form}
-            next={this.nextForm}
-            prev={this.prevForm}
-            done={this.done}
             newRegion={this.newRegion}
             newCity={this.newCity}/>
           <Footer />
@@ -182,9 +168,6 @@ class App extends React.Component {
             goHome={this.homeButton}/>
           <Form 
             form={this.state.form}
-            next={this.nextForm}
-            prev={this.prevForm}
-            done={this.done}
             newRegion={this.newRegion}
             newCity={this.newCity}/>
           <Footer />

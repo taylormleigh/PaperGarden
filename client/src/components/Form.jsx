@@ -6,7 +6,7 @@ import Results from './Results.jsx';
 import useSignUpForm from '../CustomHooks';
 import axios from 'axios';
 
-export default function Form({form, next, prev, done, newRegion, newCity}) {
+export default function Form({form, newRegion, newCity}) {
 //callback function for useSignUpForm hook
 const signup = () => {
   // alert(`${inputs.worldName} has been saved`)
