@@ -12,7 +12,7 @@ export default function F3({newCity, newRegion, inputs, handleInputChange, handl
         <br />
         <input 
           type="text" 
-          name="cityName" 
+          name="City Name" 
           onChange={handleInputChange} 
           placeholder="city name"></input>
         <br />

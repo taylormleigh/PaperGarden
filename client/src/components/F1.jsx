@@ -13,7 +13,7 @@ export default function F1({newCity, newRegion, inputs, handleInputChange, handl
         <label>Name your world</label>
         <br />
         <input 
-          name="worldName" 
+          name="World Name" 
           placeholder="world name"
           onChange={handleInputChange} 
           ></input>
@@ -24,7 +24,7 @@ export default function F1({newCity, newRegion, inputs, handleInputChange, handl
 
 
 
-          
+
         <br />
         <button onClick={newRegion}>NEW REGION</button>
 

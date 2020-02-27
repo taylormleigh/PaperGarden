@@ -10,7 +10,7 @@ export default function F2({newCity, newRegion, inputs, handleInputChange, handl
       <form onSubmit={handleSubmit}>
       <label>Name your region</label>
       <br />
-      <input name="regionName" 
+      <input name="Region Name" 
           onChange={handleInputChange}
           placeholder="region name"></input>
       <br />
