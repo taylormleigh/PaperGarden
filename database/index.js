@@ -14,7 +14,7 @@ const getWorld = function(callback) {
 };
 
 const addWorld = function(world, callback) {
-  console.log(`"${JSON.stringify(world)}"`);
+  // console.log(`"${JSON.stringify(world)}"`);
   connection.query(`Insert into worlds (worldname, userid, formfill) values ('${world.worldName}', 1, '${JSON.stringify(world)}')`, (err, data) => {
     if (err) {
       throw err;

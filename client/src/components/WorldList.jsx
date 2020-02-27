@@ -16,7 +16,6 @@ export default class WorldList extends React.Component {
 
   //on clicking the world, shows all the info associated with it
   handleClick(e){
-    console.log(e.target.id);
     this.setState({
       worldView: true,
       index: e.target.id

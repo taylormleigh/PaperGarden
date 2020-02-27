@@ -13,7 +13,7 @@ const signup = () => {
   var world = inputs;
   axios.post('http://localhost:4321/worlds', world)
   .then((res) => {
-    console.log("form.jsx axios post: ", world);
+    // console.log("form.jsx axios post: ", world);
     // console.log(res);
   })
   .catch((err) => {console.error('--> jeepers: ', err);})
@@ -24,7 +24,6 @@ const {inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);
 
   if (form <=1) {
     return (
-      
       <div className="container">
         <center>
             <F1 

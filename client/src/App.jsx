@@ -33,7 +33,7 @@ class App extends React.Component {
     //axios get request
     axios.get('http://localhost:4321/worlds')
     .then((res) => {
-      console.log("app.jsx axios get: ", res.data);
+      // console.log("app.jsx axios get: ", res.data);
       this.setState({
         worlds: [...res.data]
       })

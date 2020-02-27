@@ -7,9 +7,12 @@ export default function F2({newCity, newRegion, inputs, handleInputChange, handl
       <h1>NEW REGION</h1>
       <h3>Continent, country, etc; any area separated either politically, geographically, or culturally.</h3>
       <br />
-      Name your region
+      <form onSubmit={handleSubmit}>
+      <label>Name your region</label>
       <br />
-      <input placeholder="region name"></input>
+      <input name="regionName" 
+          onChange={handleInputChange}
+          placeholder="region name"></input>
       <br />
       <h2>GEOGRAPHY</h2>
       <br />
@@ -30,7 +33,8 @@ export default function F2({newCity, newRegion, inputs, handleInputChange, handl
         <option value = "7">Aquatic</option>
       </select>
       <br />
-      <button onClick={newCity}>NEW CITY</button>  
+      <button onClick={newCity}>NEW CITY</button> 
+      </form> 
     </div>
   )
 }

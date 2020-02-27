@@ -58,14 +58,14 @@ CREATE TABLE cities (
 
 INSERT INTO Users (id, username, pass) VALUES (1, 'Tay', 'pass');
 
-INSERT INTO Worlds (id, userId, worldName, formfill) VALUES (1, 1, 'Ice & Fire', "{worldName: 'Ice & Fire', cityName: 'Kings Landing'}");
+-- INSERT INTO Worlds (id, userId, worldName, formfill) VALUES (1, 1, 'Ice & Fire', "{'worldName': 'Ice&Fire', 'cityName': 'Kings Landing'}");
 
-INSERT INTO Regions (id, worldId, regionName) VALUES (1, 1, 'Westeros');
+-- INSERT INTO Regions (id, worldId, regionName) VALUES (1, 1, 'Westeros');
 
-INSERT INTO Cities (id, regionId, cityName) VALUES (1, 1, "King's Landing");
+-- INSERT INTO Cities (id, regionId, cityName) VALUES (1, 1, "King's Landing");
 
-INSERT INTO Worlds (id, userId, worldName, formfill) VALUES (2, 1, "Tays World", "{worldName: 'Tays World', cityName: 'Loserville'}");
+-- INSERT INTO Worlds (id, userId, worldName, formfill) VALUES (2, 1, "Tays World", "{'worldName': 'Tays World', 'cityName': 'Loserville'}");
 
-INSERT INTO Regions (id, worldId, regionName) VALUES (2, 2, 'Animus');
+-- INSERT INTO Regions (id, worldId, regionName) VALUES (2, 2, 'Animus');
 
-INSERT INTO Cities (id, regionId, cityName) VALUES (2, 2, "Loserville");
+-- INSERT INTO Cities (id, regionId, cityName) VALUES (2, 2, "Loserville");
