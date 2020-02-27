@@ -6,7 +6,7 @@ const connection = mysql.createConnection(mysqlConfig);
 const getWorld = function(callback) {
   connection.query(`Select * from worlds`, (err, data) => {
     if (err) {
-      console.error('jinkies: ', err);
+      console.error('--> jinkies: ', err);
     } else {
       callback(null, data);
     }

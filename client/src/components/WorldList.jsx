@@ -8,20 +8,23 @@ export default class WorldList extends React.Component {
 
     this.state = {
       worldView: false,
-      worlds: this.props.worldList
+      worlds: this.props.worldList,
+      index: 0
     }
     this.handleClick = this.handleClick.bind(this);
   }
 
   //on clicking the world, shows all the info associated with it
   handleClick(e){
+    console.log(e.target.id);
     this.setState({
       worldView: true,
+      index: e.target.id
     })
   }
   
   render() {
-    // if (!this.state.worldView) {
+    if (!this.state.worldView) {
       return (
         <div className="container">
             <div className="worldList">
@@ -44,18 +47,19 @@ export default class WorldList extends React.Component {
             </div>
         </div>
       );
-    // } else {
-    //   return (
-    //     <div className="container">
-    //         <div className="worldList">
-    //         <WorldView
-    //             click={this.handleClick}
-    //             worldView={this.state.worldView}
-    //             world={this.props.worldList[0]}
-    //             worldName={this.props.worldList[0].worldname}/>
-    //         </div>
-    //     </div>
-    //   );
-    // }
+    } else {
+      return (
+        <div className="container">
+            <div className="worldList">
+            <WorldView
+                index={this.state.index}
+                click={this.handleClick}
+                worldView={this.state.worldView}
+                world={this.props.worldList[this.state.index]}
+                worldName={this.props.worldList[this.state.index].worldname}/>
+            </div>
+        </div>
+      );
+    }
   }
 }

@@ -15,7 +15,7 @@ export default function WorldView({index, world, worldView, click, worldName}) {
   } else {
     return (
       <div className="worldViewName">
-        <div onClick={click}>{worldName}</div>
+        <div id={index} onClick={click}>{worldName}</div>
       </div>
     )
   }
