@@ -1,7 +1,7 @@
 # Paper & Garden
 ## *A World Building Resource for Storytellers*
 
-![logo](https://github.com/taylormleigh/PaperGarden/blob/master/client/dist/builderlogo.png)
+![logo](client/dist/builderlogo.png)
 
 ### Introduction
 This project was a brief two-day sprint where I created the minimum viable product for an app of my own conception.
