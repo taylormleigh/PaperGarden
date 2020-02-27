@@ -27,9 +27,9 @@ What I was able to complete in two days was a full-stack web application that ta
 
 ### Gifs / Screenshots
 * Minimum Viable Product:
-  _User can submit data and retrieve that data
-  _Front end is accessible and responsive
-  _Back end is set up for future scalability
+  - User can submit data and retrieve that data
+  - Front end is accessible and responsive
+  - Back end is set up for future scalability
 
 ### How does the app work?
 * When the user logs in or creates an account, the information is saved to a database.
