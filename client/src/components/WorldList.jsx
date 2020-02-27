@@ -8,9 +8,9 @@ export default class WorldList extends React.Component {
 
     this.state = {
       worldView: false,
+      worlds: this.props.worldList
     }
     this.handleClick = this.handleClick.bind(this);
-    this.setCurrentWorld = this.setCurrentWorld.bind(this);
   }
 
   //on clicking the world, shows all the info associated with it
@@ -19,16 +19,9 @@ export default class WorldList extends React.Component {
       worldView: true,
     })
   }
-
-  //click event changes current world
-  setCurrentWorld(e){
-    this.setState({
-      currentWorld: e.target.worldName
-    })
-  }
   
   render() {
-    if (!this.state.worldView) {
+    // if (!this.state.worldView) {
       return (
         <div className="container">
             <div className="worldList">
@@ -39,6 +32,7 @@ export default class WorldList extends React.Component {
                 return (
                   <li key={i}>
                     <WorldView 
+                    index={i}
                     click={this.handleClick}
                     world={world}
                     worldView={this.state.worldView}
@@ -50,18 +44,18 @@ export default class WorldList extends React.Component {
             </div>
         </div>
       );
-    } else {
-      return (
-        <div className="container">
-            <div className="worldList">
-            <WorldView
-                click={this.handleClick}
-                worldView={this.state.worldView}
-                world={this.props.worldList[0]}
-                worldName={this.props.worldList[0].worldname}/>
-            </div>
-        </div>
-      );
-    }
+    // } else {
+    //   return (
+    //     <div className="container">
+    //         <div className="worldList">
+    //         <WorldView
+    //             click={this.handleClick}
+    //             worldView={this.state.worldView}
+    //             world={this.props.worldList[0]}
+    //             worldName={this.props.worldList[0].worldname}/>
+    //         </div>
+    //     </div>
+    //   );
+    // }
   }
 }
