@@ -15,13 +15,14 @@ app.get('/worlds', (req, res) => {
   })
 });
 
-// app.post('/', (req, res) => {
-//   db.addWorld(req.body, (err, data) => {
-//     if (err) {
-//       console.error("--> zoinks: ", err);
-//     }
-//     res.send(data);
-//   })
-// });
+app.post('/worlds', (req, res) => {
+  // console.log(req.body);
+  db.addWorld(req.body, (err, data) => {
+    if (err) {
+      console.error("--> zoinks: ", err);
+    }
+    res.send(data);
+  })
+});
 
 app.listen(port, ()=> {console.log(`connected AF on port ${port}`)});

@@ -16,7 +16,8 @@ CREATE TABLE users (
 CREATE TABLE worlds (
   id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   userid int NOT NULL,
-  worldname varchar(50) NOT NULL
+  worldname varchar(50) NOT NULL,
+  formfill longtext
 );
 
 ALTER TABLE worlds
@@ -25,7 +26,8 @@ ALTER TABLE worlds
 CREATE TABLE regions (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     worldId integer(10),
-    regionName varChar(255)
+    regionName varChar(255),
+    formfill longtext
 );
 
   ALTER TABLE regions
@@ -34,7 +36,8 @@ CREATE TABLE regions (
 CREATE TABLE cities (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     regionId integer(10),
-    cityName varChar(255)
+    cityName varChar(255),
+    formfill longtext
 );
 
   ALTER TABLE cities
@@ -55,8 +58,14 @@ CREATE TABLE cities (
 
 INSERT INTO Users (id, username, pass) VALUES (1, 'Tay', 'pass');
 
-INSERT INTO Worlds (id, userId, worldName) VALUES (1, 1, 'TayLand');
+INSERT INTO Worlds (id, userId, worldName) VALUES (1, 1, 'Ice & Fire');
 
-INSERT INTO Regions (id, worldId, regionName) VALUES (1, 1, 'RegionInWorld');
+INSERT INTO Regions (id, worldId, regionName) VALUES (1, 1, 'Westeros');
 
-INSERT INTO Cities (id, regionId, cityName) VALUES (1, 1, 'CityInRegion');
+INSERT INTO Cities (id, regionId, cityName) VALUES (1, 1, "King's Landing");
+
+INSERT INTO Worlds (id, userId, worldName) VALUES (2, 1, "Tay's World");
+
+INSERT INTO Regions (id, worldId, regionName) VALUES (2, 2, 'Animus');
+
+INSERT INTO Cities (id, regionId, cityName) VALUES (2, 2, "Loserville");

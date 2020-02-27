@@ -3,7 +3,6 @@ const mysqlConfig = require('./config.js');
 
 const connection = mysql.createConnection(mysqlConfig);
 
-
 const getWorld = function(callback) {
   connection.query(`Select * from worlds`, (err, data) => {
     if (err) {
@@ -14,18 +13,16 @@ const getWorld = function(callback) {
   })
 };
 
-
 const addWorld = function(world, callback) {
-  console.log('you added a world');
-  // connection.query(`Insert ignore into categories (category, budget) values ('${cat}', '${budg}')`, (err, data) => {
-  //   if (err) {
-  //     throw err;
-  //   } else {
-  //     callback(null, data);
-  //   }
-  // })
+  console.log(`"${JSON.stringify(world)}"`);
+  connection.query(`Insert into worlds (worldname, userid, formfill) values ('${world.worldName}', 1, '${JSON.stringify(world)}')`, (err, data) => {
+    if (err) {
+      throw err;
+    } else {
+      callback(null, data);
+    }
+  })
 };
-
 
 module.exports = {
   addWorld,

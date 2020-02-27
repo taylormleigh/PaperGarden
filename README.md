@@ -33,12 +33,10 @@ What I was able to complete in two days was a full-stack web application that ta
   - Back end is set up for future scalability
 
 ### How does the app work?
-* When the user logs in or creates an account, the information is saved to a database.
-* When the user submits a form, the world they create is saved to their account.
-* What happens behind the scenes when the user interacts with it? 
-* OR What are all the place the data travels?  What happens to that data?
-* Optionally include a diagram
-* How does the tech stack come together?
+* When the user logs in, the information is validated via axios get request.
+* When the user creates a new login, an axios post request sends the data through an Express/NodeJS server to a mySQL database, which only takes unique entries for usernames. If the username they desire already exists, it will send back an error to the client.
+* When the user fills out a form, the information is saved in state via a custom React hook. 
+* When the user submits a form, the information about the world they create is saved to their account via POST request.
 
 ### Required Research
 * Though the project was to accomplish the MVP of the concept, I will be using a Feature Branch Workflow as it evolves.

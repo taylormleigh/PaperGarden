@@ -30,7 +30,7 @@ export default function F2({newCity, newRegion, inputs, handleInputChange, handl
         <option value = "7">Aquatic</option>
       </select>
       <br />
-      <button onClick={newCity}>NEW CITY</button>  |   <button type="submit">SAVE</button>  |  <button onClick={newRegion}>NEW REGION</button>
+      <button onClick={newCity}>NEW CITY</button>  
     </div>
   )
 }

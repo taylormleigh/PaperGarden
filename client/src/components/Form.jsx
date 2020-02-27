@@ -4,11 +4,19 @@ import F2 from './F2.jsx';
 import F3 from './F3.jsx';
 import Results from './Results.jsx';
 import useSignUpForm from '../CustomHooks';
+import axios from 'axios';
 
 export default function Form({form, next, prev, done, newRegion, newCity}) {
 //callback function for useSignUpForm hook
 const signup = () => {
   // alert(`${inputs.worldName} has been saved`)
+  var world = inputs;
+  axios.post('http://localhost:4321/worlds', world)
+  .then((res) => {
+    console.log("form.jsx axios post: ", world);
+    // console.log(res);
+  })
+  .catch((err) => {console.error('--> jeepers: ', err);})
 }
 //initializes the custom form hook
 const {inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);

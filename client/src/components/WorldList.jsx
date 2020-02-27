@@ -7,15 +7,23 @@ export default class WorldList extends React.Component {
     super(props);
 
     this.state = {
-      worldView: false
+      worldView: false,
     }
     this.handleClick = this.handleClick.bind(this);
+    this.setCurrentWorld = this.setCurrentWorld.bind(this);
   }
 
   //on clicking the world, shows all the info associated with it
-  handleClick(){
+  handleClick(e){
     this.setState({
-      worldView: true
+      worldView: true,
+    })
+  }
+
+  //click event changes current world
+  setCurrentWorld(e){
+    this.setState({
+      currentWorld: e.target.worldName
     })
   }
   
@@ -26,12 +34,18 @@ export default class WorldList extends React.Component {
             <div className="worldList">
             <h1>MY WORLDS</h1>
             <ul>
-              <li><WorldView 
-                click={this.handleClick}
-                worldView={this.state.worldView}
-                worldName={this.props.worldList[0].worldname}/></li>
-              <li>DopeSpot</li>
-              <li>Gargantuan 6</li>
+            {
+              this.props.worldList.map( (world, i) => {
+                return (
+                  <li key={i}>
+                    <WorldView 
+                    click={this.handleClick}
+                    world={world}
+                    worldView={this.state.worldView}
+                    worldName={world.worldname}/>
+                  </li>
+                )})
+            }
             </ul>
             </div>
         </div>
@@ -40,9 +54,10 @@ export default class WorldList extends React.Component {
       return (
         <div className="container">
             <div className="worldList">
-            <WorldView 
+            <WorldView
                 click={this.handleClick}
                 worldView={this.state.worldView}
+                world={this.props.worldList[0]}
                 worldName={this.props.worldList[0].worldname}/>
             </div>
         </div>

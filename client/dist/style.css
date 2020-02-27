@@ -6,6 +6,7 @@
 
 body {
   margin-top: 20px;
+  margin-bottom: 20px;
   background-image:  url("bgs/light_smblur.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
