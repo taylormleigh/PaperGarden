@@ -28,7 +28,8 @@ export default class WorldList extends React.Component {
             <ul>
               <li><WorldView 
                 click={this.handleClick}
-                worldView={this.state.worldView}/></li>
+                worldView={this.state.worldView}
+                worldName={this.props.worldList[0].worldname}/></li>
               <li>DopeSpot</li>
               <li>Gargantuan 6</li>
             </ul>
@@ -39,10 +40,10 @@ export default class WorldList extends React.Component {
       return (
         <div className="container">
             <div className="worldList">
-            <h1>*WORLD NAME*</h1>
             <WorldView 
                 click={this.handleClick}
-                worldView={this.state.worldView}/>
+                worldView={this.state.worldView}
+                worldName={this.props.worldList[0].worldname}/>
             </div>
         </div>
       );

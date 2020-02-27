@@ -3,15 +3,17 @@ const mysqlConfig = require('./config.js');
 
 const connection = mysql.createConnection(mysqlConfig);
 
-// const getAllTransactions = function(callback) {
-//   connection.query(`Select * from transactions`, (err, data) => {
-//     if (err) {
-//       throw err;
-//     } else {
-//       callback(null, data);
-//     }
-//   })
-// };
+
+const getWorld = function(callback) {
+  connection.query(`Select * from worlds`, (err, data) => {
+    if (err) {
+      console.error('jinkies: ', err);
+    } else {
+      callback(null, data);
+    }
+  })
+};
+
 
 const addWorld = function(world, callback) {
   console.log('you added a world');
@@ -26,5 +28,6 @@ const addWorld = function(world, callback) {
 
 
 module.exports = {
-  addWorld
+  addWorld,
+  getWorld
 };

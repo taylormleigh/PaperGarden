@@ -8,7 +8,7 @@ import useSignUpForm from '../CustomHooks';
 export default function Form({form, next, prev, done, newRegion, newCity}) {
 //callback function for useSignUpForm hook
 const signup = () => {
-  alert(`${inputs.worldName} has been saved`)
+  // alert(`${inputs.worldName} has been saved`)
 }
 //initializes the custom form hook
 const {inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);

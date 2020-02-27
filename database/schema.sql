@@ -13,32 +13,32 @@ CREATE TABLE users (
   pass varchar(50) NOT NULL
 );
 
-CREATE TABLE worlds {
-    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    regionId integer(10),
-    worldName varChar(255)
-};
+CREATE TABLE worlds (
+  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  userid int NOT NULL,
+  worldname varchar(50) NOT NULL
+);
 
 ALTER TABLE worlds
-  ADD FOREIGN KEY (regionId) references Users(id);
+  ADD FOREIGN KEY (userid) references Users(id);
 
-CREATE TABLE regions {
+CREATE TABLE regions (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    regionId integer(10),
-    worldName varChar(255)
-};
+    worldId integer(10),
+    regionName varChar(255)
+);
 
-ALTER TABLE regions
+  ALTER TABLE regions
   ADD FOREIGN KEY (worldId) REFERENCES Worlds(id);
 
-CREATE TABLE cities {
+CREATE TABLE cities (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     regionId integer(10),
-    regionName varChar(255),
-};
+    cityName varChar(255)
+);
 
-ALTER TABLE cities
-  ADD FOREIGN KEY (worldId) REFERENCES Worlds(id);
+  ALTER TABLE cities
+  ADD FOREIGN KEY (regionId) REFERENCES Regions(id);
     
 
 /*  Execute this file from the command line by typing:

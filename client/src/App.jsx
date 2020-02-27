@@ -17,12 +17,9 @@ class App extends React.Component {
       home: true,
       createPage: false,
       loggedIn: false,
-      world: {
-        name: '',
-      },
+      worlds: []
     }
 
-    this.save = this.save.bind(this);
     this.done = this.done.bind(this);
     this.login = this.login.bind(this);
     this.worldList = this.worldList.bind(this);
@@ -33,19 +30,22 @@ class App extends React.Component {
   }
 
   //saves input to the database
-  save(){
-    let world = this.state.world
-    //axios post request sends values in state
-    axios.post('http://localhost:4321/', world)
+  componentDidMount(){
+    //axios get request
+    axios.get('http://localhost:4321/worlds')
     .then((res) => {
-      console.log(res);
+      console.log(res.data);
+      this.setState({
+        worlds: [...res.data]
+      })
+
     })
-    .catch((err) => {console.error("--> ruh roh: ", err)})
+    .catch((err) => {console.error("--> ruh roh: ", err)});
   }
 
   //starts the form over again AKA Create New World
   done(){
-    this.save();
+    // this.save();
 
     this.setState({
       form: 4,
@@ -79,7 +79,7 @@ class App extends React.Component {
   }
   //when you click "new region" it takes you back to new Region screen
   newRegion(){
-    this.save();
+    // this.save();
 
     this.setState({
       form: 2
@@ -87,7 +87,7 @@ class App extends React.Component {
   }
   //when you click "new city" it takes you back to the new city screen
   newCity(){
-    this.save();
+    // this.save();
 
     this.setState({
       form: 3
@@ -165,7 +165,7 @@ class App extends React.Component {
             worldList={this.worldList}
             newWorld={this.newWorld}
             goHome={this.homeButton}/>
-          <WorldList />
+          <WorldList worldList={this.state.worlds}/>
           <Footer />
           </center>
         </>
@@ -191,7 +191,6 @@ class App extends React.Component {
           </center>
         </>
       );
-
     }
   }
 };
