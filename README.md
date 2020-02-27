@@ -39,11 +39,10 @@ What I was able to complete in two days was a full-stack web application that ta
 * Optionally include a diagram
 * How does the tech stack come together?
 
-### Required Research?
-Workflow and Key lessons from your team - specifically those related to: Agile, CI/CD, testing, working with external stakeholders, ticketing, and user stories.
+### Required Research
 * Though the project was to accomplish the MVP of the concept, I will be using a Feature Branch Workflow as it evolves.
 * I implement Agile Practices to organize and execute this project.
-* User stories, completed tickets, and stretch goals can be accessed at Paper & Garden's (Trello)[https://trello.com/b/IzHFL3UD/papergarden]
+* User stories, completed tickets, and stretch goals can be accessed at Paper & Garden's [Trello](https://trello.com/b/IzHFL3UD/papergarden)
 
 ### Future Plans
 What additional features do you plan to add, how do you plan to implement those features?
