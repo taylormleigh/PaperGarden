@@ -1,56 +1,45 @@
-DROP DATABASE worldBuild;
+DROP DATABASE IF EXISTS worldBuild;
 
 CREATE DATABASE worldBuild;
 
 USE worldBuild;
 
 
-CREATE TABLE Habitat (
-  id integer NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  habitat_id int,
-  habitat_name varchar(50)
+
+
+CREATE TABLE users (
+  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  username varchar(50) NOT NULL UNIQUE,
+  pass varchar(50) NOT NULL
 );
 
-CREATE TABLE Users (
-  id integer NOT NULL AUTO_INCREMENT primary key,
-  username varchar(50) UNIQUE,
-  password varchar(80)
-);
-
-CREATE TABLE Worlds {
-    id integer NOT NULL AUTO_INCREMENT primary key,
-    user_id integer,
-    worldName varChar(255),
-    FOREIGN KEY (user_id) REFERENCES Users(id)
+CREATE TABLE worlds {
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    regionId integer(10),
+    worldName varChar(255)
 };
 
-CREATE TABLE Regions {
-  id integer NOT NULL AUTO_INCREMENT primary key,
-  world_id integer,
-  regionName varChar(255),
-  habitat_id int,
+ALTER TABLE worlds
+  ADD FOREIGN KEY (regionId) references Users(id);
 
-  FOREIGN KEY (world_id) REFERENCES Worlds(id),
-  FOREIGN KEY (habitat_id) REFERENCES Habitats(habitat_id)
-}
+CREATE TABLE regions {
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    regionId integer(10),
+    worldName varChar(255)
+};
 
-CREATE TABLE Animals (
-  id integer NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  habitat_id integer,
-  animal_name varchar(255),
-  predator boolean,
-  FOREIGN KEY (habitat_id) references habitat(habitat_id)
-);
+ALTER TABLE regions
+  ADD FOREIGN KEY (worldId) REFERENCES Worlds(id);
 
--- CREATE TABLE Plants (
+CREATE TABLE cities {
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    regionId integer(10),
+    regionName varChar(255),
+};
 
--- );
-
--- ALTER TABLE userInput
---   ADD FOREIGN KEY (habitat_id) references habitat(habitat_id);
-
--- ALTER TABLE Animals
---   ADD FOREIGN KEY (habitat_id) references habitat(habitat_id);
+ALTER TABLE cities
+  ADD FOREIGN KEY (worldId) REFERENCES Worlds(id);
+    
 
 /*  Execute this file from the command line by typing:
  *    mysql -u <USER> < schema.sql
@@ -64,23 +53,10 @@ CREATE TABLE Animals (
  *    mysql -u root < schema.sql
 */
 
-INSERT INTO habitat (habitat_id, habitat_name)  VALUES (1, 'Desert');
+INSERT INTO Users (id, username, pass) VALUES (1, 'Tay', 'pass');
 
-INSERT INTO habitat (habitat_id, habitat_name)  VALUES (2, 'Tundra');
+INSERT INTO Worlds (id, userId, worldName) VALUES (1, 1, 'TayLand');
 
-INSERT INTO habitat (habitat_id, habitat_name)  VALUES (3, 'Grassland');
+INSERT INTO Regions (id, worldId, regionName) VALUES (1, 1, 'RegionInWorld');
 
-INSERT INTO habitat (habitat_id, habitat_name)  VALUES (4, 'Forest');
-
-INSERT INTO habitat (habitat_id,
- habitat_name)  VALUES (5, 'Rainforest');
-
-INSERT INTO habitat (habitat_id, habitat_name)  VALUES (6, 'Wetland');
-
-INSERT INTO habitat (habitat_id, habitat_name)  VALUES (7, 'Aquatic');
-
-INSERT INTO Animals (animal_name, habitat_id,predator)  VALUES ('alligator', 6, true);
-
-INSERT INTO Users (username, password) VALUES ('testTay', 'password')
-
-INSERT INTO Worlds (user_id, worldName) VALUES (1, 'WetlandWorld');
+INSERT INTO Cities (id, regionId, cityName) VALUES (1, 1, 'CityInRegion');
