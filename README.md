@@ -16,7 +16,7 @@ What I was able to complete in two days was a full-stack web application that ta
 * Users are able to fill out information based on the prompts and reference them during the writing process.
 
 ### Tech stack
-![js](logos/javascript.png)![react](logos/react.png)![css](logos/css.png)![nodejs](logos/nodejs.png)![mysql](logos/mysql.png)
+![react](logos/react.png)![css](logos/css.png)![nodejs](logos/nodejs.png)![mysql](logos/mysql.png)
 * Language: JavaScript
 * Client: React, CSS
 * Server: Express, Node.js
