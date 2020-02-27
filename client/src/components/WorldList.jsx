@@ -9,7 +9,8 @@ export default class WorldList extends React.Component {
     this.state = {
       worldView: false,
       worlds: this.props.worldList,
-      index: 0
+      index: 0,
+      change: true
     }
     this.handleClick = this.handleClick.bind(this);
   }

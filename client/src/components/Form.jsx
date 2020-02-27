@@ -15,11 +15,12 @@ const signup = () => {
   .then((res) => {
     console.log("form.jsx axios post: ", world);
     done();
+    // window.location.reload(false);
     // console.log(res);
   })
   .catch((err) => {
     console.error('--> jeepers: ', err);
-    // alert("There was a problem adding your world, make sure it doesn't have the same name as a previously created world");
+    alert("There was a problem adding your world, make sure it doesn't have the same name as a previously created world");
   })
 }
 //initializes the custom form hook

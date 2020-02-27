@@ -16,7 +16,7 @@ class App extends React.Component {
       worldList: false,
       home: true,
       createPage: false,
-      loggedIn: false,
+      loggedIn: true,//set to true for testing
       worlds: []
     }
 
@@ -41,7 +41,6 @@ class App extends React.Component {
     })
     .catch((err) => {console.error("--> ruh roh: ", err)});
   }
-
 
   //creates a user for new users/logs in existing users
   login(){

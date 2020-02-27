@@ -14,7 +14,7 @@ export default function WorldView({index, world, worldView, click, worldName}) {
         <ul>
         {
           values.map((value, i) => {
-            return <li key={"a"+i}>{keys[i]} : {value} </li>;
+            return <li key={"a"+i}><u>{keys[i]}</u> : {value} </li>;
           })
         }
         </ul>
