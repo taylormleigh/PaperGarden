@@ -32,8 +32,8 @@ What I was able to complete in two days was a full-stack web application that ta
   - Front end is accessible and responsive
   - Back end is set up for future scalability
   ![HomePic](screenshots/homePic.png)
-  ![FormGif](screenshots/gifWorldList.gif)
-  ![ListGif](client/dist/builderlogo.png)
+  ![FormGif](screenshots/gifForms.gif)
+  ![ListGif](screenshots/gifWorldList.gif)
 
 ### How does the app work?
 * When the user logs in, the information is validated via axios get request.
