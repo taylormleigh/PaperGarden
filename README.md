@@ -31,6 +31,9 @@ What I was able to complete in two days was a full-stack web application that ta
   - User can submit data and retrieve that data
   - Front end is accessible and responsive
   - Back end is set up for future scalability
+  ![HomePic](screenshots/homePic.png)
+  ![FormGif](screenshots/gifWorldList.gif)
+  ![ListGif](client/dist/builderlogo.png)
 
 ### How does the app work?
 * When the user logs in, the information is validated via axios get request.
