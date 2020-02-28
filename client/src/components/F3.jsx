@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function F3({newCity, newRegion, inputs, handleInputChange, handleSubmit}) {
-  
+export default function F3({inputs, handleInputChange, handleSubmit}) {
+  console.log(inputs);
   return (
     <div id="F3">
-      <h1>NEW CITY</h1>
-      <h3>Add a new city to *Region*</h3>
+      <h1>NEW CITY IN {inputs['Region Name'].toUpperCase()}</h1>
+      <h3>Add a new city, town, etc. to your region.</h3>
       <br />
       <form onSubmit={handleSubmit}>
         <label>Name your city</label>
