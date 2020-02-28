@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function F3({inputs, handleInputChange, handleSubmit}) {
-  console.log(inputs);
   return (
     <div id="F3">
       <h1>NEW CITY IN {inputs['Region Name'].toUpperCase()}</h1>

@@ -102,7 +102,8 @@ class App extends React.Component {
             worldList={this.worldList}
             newWorld={this.newWorld}
             goHome={this.homeButton}/>
-          <Home />
+          <Home 
+            newWorld={this.newWorld}/>
           <Footer />
           </center>
         </>
