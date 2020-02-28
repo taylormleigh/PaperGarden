@@ -24,6 +24,7 @@ What I was able to complete in two days was a full-stack web application that ta
 ### Challenges
 * I learned how to use React hooks and specifically how to create custom hooks to create a fully-functional form without utilizing a pre-made library.
 * I designed a SQL database that would be scalable with my stretch goals, yet I did it quickly enough to meet the two-day deadline.
+* I wanted to make the forms fully functional, but I had to pare down my concept. However, I fully designed a MySQL databse to be able to accomodate future functionality.
 
 ### Minimum Viable Product:
 * User can submit data and retrieve that data
@@ -38,7 +39,7 @@ What I was able to complete in two days was a full-stack web application that ta
 * When the user logs in, the information is validated via axios get request.
 * When the user creates a new login, an axios post request sends the data through an Express/NodeJS server to a mySQL database, which only takes unique entries for usernames. If the username they desire already exists, it will send back an error to the client.
 * When the user fills out a form, the information is saved in state via a custom React hook. 
-* When the user submits a form, the information about the world they create is saved to their account via POST request.
+* When the user submits a form, the information about the world they create is saved to a mySQL database.
 
 ### Required Research
 * Though the project was to accomplish the MVP of the concept, I will be using a Feature Branch Workflow as it evolves.
