@@ -6,7 +6,7 @@ import Results from './Results.jsx';
 import useSignUpForm from '../CustomHooks';
 import axios from 'axios';
 
-export default function Form({done, form, newRegion, newCity}) {
+export default function Form({done, prev, form, newRegion, newCity}) {
 //callback function for useSignUpForm hook
 const signup = () => {
   // alert(`${inputs.worldName} has been saved`)
@@ -32,6 +32,7 @@ const {inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);
       <div className="container">
         <center>
             <F1 
+              prev={prev}
               newCity={newCity}
               newRegion={newRegion}
               inputs={inputs}
@@ -46,6 +47,7 @@ const {inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);
       <div className="container">
         <center>
             <F2 
+              prev={prev}
               newCity={newCity}
               newRegion={newRegion}
               inputs={inputs}
@@ -61,6 +63,7 @@ const {inputs, handleInputChange, handleSubmit} = useSignUpForm(signup);
       <div className="container">
         <center>
             <F3 
+              prev={prev}
               newCity={newCity}
               newRegion={newRegion}
               inputs={inputs}

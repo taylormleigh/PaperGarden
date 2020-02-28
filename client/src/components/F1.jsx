@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function F1({newCity, newRegion, inputs, handleInputChange, handleSubmit}) {
+export default function F1({newRegion, inputs, handleInputChange, handleSubmit}) {
   
   return (
     <div id="F1">
@@ -8,7 +8,7 @@ export default function F1({newCity, newRegion, inputs, handleInputChange, handl
       <h3>Fill out as much or as little as you like; your world can be edited later.</h3>
       <br />
 
-      <form onSubmit={handleSubmit}>
+      <form>
 
         <label>Name your world</label>
         <br />
@@ -16,6 +16,7 @@ export default function F1({newCity, newRegion, inputs, handleInputChange, handl
           name="World Name" 
           placeholder="world name"
           onChange={handleInputChange} 
+          value={inputs["World Name"]}
           ></input>
         <br />
         <h2>PLANET</h2>
@@ -45,11 +46,11 @@ export default function F1({newCity, newRegion, inputs, handleInputChange, handl
         <br />
         Could this world exist with our current laws of physics or is there a fundamental difference?
         <br />
-        <textarea placeholder="spell out the logic if it differs from the universe we know, i.e. magic is real"></textarea>
+        <textarea placeholder="spell out the logic if it differs from the universe we know, i.e. magic is real and energy can come from nothing"></textarea>
         <br />
-        What quirks about this reality exist?
+        What other quirks about this reality exist?
         <br />
-        <textarea placeholder="i.e. physics still hold, but people have gills and can breathe underwater"></textarea>
+        <textarea placeholder="i.e. physics still hold, but humans have gills and can breathe underwater"></textarea>
         <br />
         <h2>LIFE</h2>
         <br />

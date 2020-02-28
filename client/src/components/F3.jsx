@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function F3({inputs, handleInputChange, handleSubmit}) {
+export default function F3({prev, inputs, handleInputChange, handleSubmit}) {
   return (
     <div id="F3">
       <h1>NEW CITY IN {inputs['Region Name'].toUpperCase()}</h1>
@@ -12,10 +12,11 @@ export default function F3({inputs, handleInputChange, handleSubmit}) {
         <input 
           type="text" 
           name="City Name" 
+          value={inputs["City Name"]}          
           onChange={handleInputChange} 
           placeholder="city name"></input>
         <br />
-        <button type="submit">DONE</button>
+        <button onClick={prev}>BACK</button> | <button type="submit">DONE</button>
       </form>
     </div>
   )

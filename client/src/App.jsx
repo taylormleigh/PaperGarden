@@ -21,6 +21,7 @@ class App extends React.Component {
     }
 
     this.login = this.login.bind(this);
+    this.prev = this.prev.bind(this);
     this.worldList = this.worldList.bind(this);
     this.homeButton = this.homeButton.bind(this);
     this.newRegion = this.newRegion.bind(this);
@@ -47,6 +48,16 @@ class App extends React.Component {
     this.setState({
       loggedIn: true
     })
+  }
+
+  //go backward a page
+  prev(){
+    if (this.state.form > 1) {
+      var prev = this.state.form - 1 
+      this.setState({
+        form: prev
+      })
+    }
   }
 
   //when clicking "My Worlds" in header, shows the worlds list
@@ -135,6 +146,7 @@ class App extends React.Component {
             goHome={this.homeButton}/>
           <Form 
             done={this.worldList}
+            prev={this.prev}
             form={this.state.form}
             newRegion={this.newRegion}
             newCity={this.newCity}/>
@@ -169,6 +181,7 @@ class App extends React.Component {
             goHome={this.homeButton}/>
           <Form 
             done={this.worldList}
+            prev={this.prev}
             form={this.state.form}
             newRegion={this.newRegion}
             newCity={this.newCity}/>

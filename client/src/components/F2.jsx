@@ -1,16 +1,18 @@
 import React from 'react';
 // import useSignUpForm from '../CustomHooks';
 
-export default function F2({newCity, newRegion, inputs, handleInputChange, handleSubmit}) {
+export default function F2({prev, newCity, newRegion, inputs, handleInputChange, handleSubmit}) {
   return (
     <div id="F2">
       <h1>NEW REGION IN {inputs['World Name'].toUpperCase()}</h1>
       <h3>Continent, country, etc; any area separated either politically, geographically, or culturally.</h3>
       <br />
-      <form onSubmit={handleSubmit}>
+      <form>
       <label>Name your region</label>
       <br />
-      <input name="Region Name" 
+      <input 
+          name="Region Name" 
+          value={inputs["Region Name"]}
           onChange={handleInputChange}
           placeholder="region name"></input>
       <br />
@@ -208,7 +210,7 @@ export default function F2({newCity, newRegion, inputs, handleInputChange, handl
 
 
       <br />
-      <button onClick={newCity}>NEW CITY</button> 
+      <button onClick={prev}>BACK</button> | <button onClick={newCity}>NEW CITY</button> 
       </form> 
     </div>
   )
