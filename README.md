@@ -24,13 +24,11 @@ What I was able to complete in two days was a full-stack web application that ta
 ### Challenges
 * I learned how to use React hooks and specifically how to create custom hooks to create a fully-functional form without utilizing a pre-made library.
 * I designed a SQL database that would be scalable with my stretch goals, yet I did it quickly enough to meet the two-day deadline.
-*
 
-### Gifs / Screenshots
-* Minimum Viable Product:
-  - User can submit data and retrieve that data
-  - Front end is accessible and responsive
-  - Back end is set up for future scalability
+### Minimum Viable Product:
+* User can submit data and retrieve that data
+* Front end is accessible and responsive
+* Back end is set up for future scalability
   ![HomePic](screenshots/homePic.png)
   ![FormGif](screenshots/gifForms.gif)
   ![ListGif](screenshots/gifWorldList.gif)
@@ -48,7 +46,9 @@ What I was able to complete in two days was a full-stack web application that ta
 
 ### Future Plans
 What additional features do you plan to add, how do you plan to implement those features?
-* Scaling the database
+* Full form functionality with increased usability (accordion drawer designs, etc)
+* Unique user accounts
 * Stress-Testing and prepping for increased traffic as features evolve
 * Additional features, such as character-building, plot development, utilizing APIs to autofill geographic information, and more.
 * Sharpening the usability of the interface.
+* Deployment to AWS via Elastic Beanstalk using Docker.
