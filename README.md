@@ -24,7 +24,7 @@ What I was able to complete in two days was a full-stack web application that ta
 ### Challenges
 * I learned how to use React hooks and specifically how to create custom hooks to create a fully-functional form without utilizing a pre-made library.
 * I designed a SQL database that would be scalable with my stretch goals, yet I did it quickly enough to meet the two-day deadline.
-* I wanted to make the forms fully functional, but I had to pare down my concept. However, I fully designed a MySQL databse to be able to accomodate future functionality.
+* I wanted to make the forms fully functional, but I had to pare down my concept. However, I fully designed a MySQL database to be able to accomodate future functionality.
 
 ### Minimum Viable Product:
 * User can submit data and retrieve that data
