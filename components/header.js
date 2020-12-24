@@ -1,20 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Header({worldList, newWorld, goHome}) {
-
+export default function Header() {
   return (
     <div className="container" id="header">
-          <div id="logo"></div>
-
-
-          <Link href={"/"}><button className="headerButton" onClick={goHome}>HOME</button></Link>
-
-
-          <Link href={"/MyWorlds"}><button className="headerButton" onClick={worldList}>MY WORLDS</button></Link>
-
-
-          <Link href={"/CreateWorld"}><button className="headerButton" onClick={newWorld}>CREATE</button></Link>
-        </div>
+      <div id="logo"></div>
+      <Link href={"/"}><button className="headerButton">home</button></Link>
+      <Link href={"/MyWorlds"}><button className="headerButton">my worlds</button></Link>
+      <Link href={"/CreateWorld"}><button className="headerButton">create</button></Link>
+    </div>
     );
 }
