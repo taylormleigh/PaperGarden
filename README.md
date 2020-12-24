@@ -1,56 +1,30 @@
-# Paper & Garden
-## *A World Building Resource for Storytellers*
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
-![logo](client/dist/builderlogo.png)
+## Getting Started
 
-### Introduction
-This project was a brief two-day sprint where I created the minimum viable product for an app of my own conception.
+First, run the development server:
 
-I decided to create an app for storytellers (novelists, screenwriters, etc.) to assist in world-building. I pared down the idea to the simplest idea waiting behind all of the scalable potential and began work. Though the timeline was rushed, I wanted to use this project as an opportunity to explore features new to me using raw React and CSS rather than utilizing libraries.
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-What I was able to complete in two days was a full-stack web application that takes in input about a fictional world and saves the information to a user's account.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### What does the app do?
-* Paper & Garden offers a user-friendly way to develop fictional worlds.
-* It was built for creators to save and expand upon the worlds of their fiction.
-* Users are able to fill out information based on the prompts and reference them during the writing process.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-### Tech stack
-* Language: JavaScript
-* Client: React, CSS
-* Server: Express, Node.js
-* Database: mySQL
+## Learn More
 
-### Challenges
-* I learned how to use React hooks and specifically how to create custom hooks to create a fully-functional form without utilizing a pre-made library.
-* I designed a SQL database that would be scalable with my stretch goals, yet I did it quickly enough to meet the two-day deadline.
-* I wanted to make the forms fully functional, but I had to pare down my concept. However, I fully designed a MySQL database to be able to accomodate future functionality.
+To learn more about Next.js, take a look at the following resources:
 
-### Minimum Viable Product:
-* User can submit data and retrieve that data
-* Front end is accessible and responsive
-* Back end is set up for future scalability
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-  ![HomePic](screenshots/homePic.png)
-  ![FormGif](screenshots/gifForms.gif)
-  ![ListGif](screenshots/gifWorldList.gif)
+You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
 
-### How does the app work?
-* When the user logs in, the information is validated via axios get request.
-* When the user creates a new login, an axios post request sends the data through an Express/NodeJS server to a mySQL database, which only takes unique entries for usernames. If the username they desire already exists, it will send back an error to the client.
-* When the user fills out a form, the information is saved in state via a custom React hook. 
-* When the user submits a form, the information about the world they create is saved to a mySQL database.
+## Deploy on ZEIT Now
 
-### Required Research
-* Though the project was to accomplish the MVP of the concept, I will be using a Feature Branch Workflow as it evolves.
-* I implement Agile Practices to organize and execute this project.
-* User stories, completed tickets, and stretch goals can be accessed at Paper & Garden's [Trello](https://trello.com/b/IzHFL3UD/papergarden)
+The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### Future Plans
-What additional features do you plan to add, how do you plan to implement those features?
-* Full form functionality with increased usability (accordion drawer designs, etc)
-* Unique user accounts
-* Stress-Testing and prepping for increased traffic as features evolve
-* Additional features, such as character-building, plot development, utilizing APIs to autofill geographic information, and more.
-* Sharpening the usability of the interface.
-* Deployment to AWS via Elastic Beanstalk using Docker.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
