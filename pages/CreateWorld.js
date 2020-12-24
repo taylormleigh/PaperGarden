@@ -1,5 +1,6 @@
 import React from 'react';
-import Layout from '../components/layout.js'
+import Layout from '../components/layout.js';
+import Link from 'next/link';
 
 export default function NewWorld({newRegion, inputs, handleInputChange, handleSubmit}) {
   
@@ -27,24 +28,21 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
         <br />
         How many days are in the year?
         <br />
-        <input placeholder="revolution"></input>
+        <input name="Revolution" placeholder="revolution"></input>
         <br />
         How many hours are in a day?
         <br />
-        <input placeholder="rotation"></input>
+        <input name="Rotation" placeholder="rotation"></input>
         <br />
         What are the seasons?
         <br />
-        <textarea  placeholder="and how long does each season last?"></textarea>
+        <textarea name="Seasons" placeholder="and how long does each season last?"></textarea>
         <br />
         How many suns & moons?
         <br />
-        <input  placeholder="do the satellites have names?"></input>
+        <input name="Satellites" placeholder="do the satellites have names?"></input>
         <br />
-        What are the seasons?
-        <br />
-        <textarea  placeholder="and how long does each season last?"></textarea>
-        <br />
+        {/* <br />
         <h2>LOGIC</h2>
         <br />
         Could this world exist with our current laws of physics or is there a fundamental difference?
@@ -63,7 +61,7 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
         <textarea placeholder="general appearance(s)"></textarea>
         <textarea placeholder="average lifespan(s)"></textarea>
         <textarea placeholder="unique facets, physical and otherwise"></textarea>
-        <textarea placeholder="how each interacts with other races"></textarea>
+        <textarea placeholder="how each interacts with other races"></textarea> */}
 
 
 
@@ -73,7 +71,8 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
 
 
         <br />
-        {/* <button onClick={newRegion}>NEW REGION</button> */}
+        {/* <Link href="/CreateRegion"><button>NEW REGION</button></Link> */}
+        <button type="submit">DONE</button>
 
       </form>
 
