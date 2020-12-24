@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from '../components/layout.js';
+import Layout from './layout.js';
 import Link from 'next/link';
 
 export default function NewWorld({newRegion, inputs, handleInputChange, handleSubmit}) {
-  
+  console.log(inputs);
   return (
-    <Layout>
+    <>
 
     <div id="F1">
       <h1>NEW WORLD</h1>
@@ -72,11 +72,13 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
 
         <br />
         {/* <Link href="/CreateRegion"><button>NEW REGION</button></Link> */}
-        <button type="submit">DONE</button>
+        <Link href="/MyWorlds">
+          <button type="submit" onClick={handleSubmit()}>DONE</button>
+        </Link>
 
       </form>
 
     </div>
-    </Layout>
+    </>
   );
 }

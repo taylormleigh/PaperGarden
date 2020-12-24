@@ -7,7 +7,7 @@ export default function Header() {
       <div id="logo"></div>
       <Link href={"/"}><button className="headerButton">home</button></Link>
       <Link href={"/MyWorlds"}><button className="headerButton">my worlds</button></Link>
-      <Link href={"/CreateWorld"}><button className="headerButton">create</button></Link>
+      <Link href={"/Create"}><button className="headerButton">create</button></Link>
     </div>
     );
 }

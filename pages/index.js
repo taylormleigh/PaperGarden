@@ -15,7 +15,7 @@ export default function Home({newWorld}) {
 
           <p />Paper & Garden is a free service that assists storytellers in developing their setting. Whether you're designing a story or planting it, your locations can be as rich as characters. Each region and city has a unique personality that interacts with your story and the people within it. Help to maintain consistency by saving the details of those places here for easy reference.
 
-          <p /><Link href="/CreateWorld"><button className="headerButton">BEGIN</button></Link>
+          <p /><Link href="/Create"><button className="headerButton">BEGIN</button></Link>
           <p />
       </div>
     </Layout>
