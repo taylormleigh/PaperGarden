@@ -1,7 +1,7 @@
 # Paper & Garden
 ## *A World Building Resource for Storytellers*
 
-![logo](client/dist/builderlogo.png)
+![logo](public/builderlogo.png)
 
 ### Introduction
 This project was a brief two-day sprint where I created the minimum viable product for an app of my own conception.
