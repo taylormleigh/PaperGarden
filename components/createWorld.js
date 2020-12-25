@@ -1,9 +1,30 @@
 import React from 'react';
 import Layout from './layout.js';
 import Link from 'next/link';
+import worlds from '../database/testAPI';
 
 export default function NewWorld({newRegion, inputs, handleInputChange, handleSubmit}) {
   console.log(inputs);
+
+  let worldObj = {
+    WorldName: inputs.WorldName,
+    WorldDetails: {
+      Revolution: inputs.Revolution,
+      Rotation: inputs.Rotation,
+      Seasons: inputs.Seasons,
+      Satellites: inputs.Satellites,
+    },
+    WorldRegions: []
+  }
+
+  console.log(worldObj);
+
+  const addWorld = (newWorldObj) => {
+    newWorldObj["worldID"] = worlds.length-1;
+    worlds.push(newWorldObj);
+    return;
+  }
+
   return (
     <>
 
@@ -17,7 +38,7 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
         <label>Name your world</label>
         <br />
         <input 
-          name="World Name" 
+          name="WorldName" 
           placeholder="world name"
           onChange={handleInputChange} 
           // value={inputs["World Name"]}
@@ -28,19 +49,19 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
         <br />
         How many days are in the year?
         <br />
-        <input name="Revolution" placeholder="revolution"></input>
+        <input name="Revolution" placeholder="revolution" onChange={handleInputChange}></input>
         <br />
         How many hours are in a day?
         <br />
-        <input name="Rotation" placeholder="rotation"></input>
+        <input name="Rotation" placeholder="rotation" onChange={handleInputChange}></input>
         <br />
         What are the seasons?
         <br />
-        <textarea name="Seasons" placeholder="and how long does each season last?"></textarea>
+        <textarea name="Seasons" placeholder="and how long does each season last?" onChange={handleInputChange}></textarea>
         <br />
         How many suns & moons?
         <br />
-        <input name="Satellites" placeholder="do the satellites have names?"></input>
+        <input name="Satellites" placeholder="do the satellites have names?" onChange={handleInputChange}></input>
         <br />
         {/* <br />
         <h2>LOGIC</h2>
@@ -73,7 +94,7 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
         <br />
         {/* <Link href="/CreateRegion"><button>NEW REGION</button></Link> */}
         <Link href="/MyWorlds">
-          <button type="submit" onClick={handleSubmit()}>DONE</button>
+          <button type="submit" onClick={addWorld(worldObj)}>DONE</button>
         </Link>
 
       </form>

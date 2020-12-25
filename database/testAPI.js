@@ -1,47 +1,47 @@
-let worlds = [
+module.exports = [
   {
-    world_id: 0,
-    world_name: "Nile",
-    world_details: {
-      revolution: 365,
-      rotation: 24,
-      seasons: "four seasons, summer, fall, winter and spring",
-      satellites: "three suns and one moon",
+    WorldID: 0,
+    WorldName: "Nile",
+    WorldDetails: {
+      Revolution: 365,
+      Rotation: 24,
+      Seasons: "four seasons, summer, fall, winter and spring",
+      Satellites: "three suns and one moon",
     },
-    world_regions: [
+    WorldRegions: [
       {
-        region_name: "West", //worlds[0].world_regions[0]
-        region_details: {
-          environment: "swamp",
+        RegionName: "West", //worlds[0].world_regions[0]
+        RegionDetails: {
+          Environment: "swamp",
         },
-        region_cities: [
+        RegionCities: [
           {
-            city_name: "Fly",
-            city_details: {
-              size: "small town", //worlds[0].world_regions[0].region_cities[0].city_details.size
-              exports: "glass",
+            CityName: "Fly",
+            CityDetails: {
+              Size: "small town", //worlds[0].world_regions[0].region_cities[0].city_details.size
+              Exports: "glass",
             }
           },
           {
-            city_name: "Eauville",
-            city_details: {
-              size: "medium sized port city",
-              exports: "seafood; fish and oysters",
+            CityName: "Eauville",
+            CityDetails: {
+              Size: "medium sized port city",
+              Exports: "seafood; fish and oysters",
             }
           }
         ],
       },
       {
-        region_name: "South",
-        region_details: {
-          environment: "tropical",
+        RegionName: "South",
+        RegionDetails: {
+          Environment: "tropical",
         },
-        region_cities: [
+        RegionCities: [
           {
-            city_name: "Jet",
-            city_details: {
-              size: "large city",
-              exports: "tobacco, crafted goods, fabric",
+            CityName: "Jet",
+            CityDetails: {
+              Size: "large city",
+              Exports: "tobacco, crafted goods, fabric",
             }
           }
         ],
@@ -50,26 +50,26 @@ let worlds = [
   },
 
   {
-    world_id: 1,
-    world_name: "TestWorld",
-    world_details: {
-      revolution: 42,
-      rotation: 54,
-      seasons: "three seasons that last seven years each",
-      satellites: "six hundred satellites; you can't even see the sun",
+    WorldID: 1,
+    WorldName: "TestWorld",
+    WorldDetails: {
+      Revolution: 42,
+      Rotation: 54,
+      Seasons: "three seasons that last seven years each",
+      Satellites: "six hundred satellites; you can't even see the sun",
     },
-    world_regions: [
+    WorldRegions: [
       {
-        region_name: "region name",
-        region_details: {
-          environment: "type of environment",
+        RegionName: "region name",
+        RegionDetails: {
+          Environment: "type of environment",
         },
-        region_cities: [
+        RegionCities: [
           {
-            city_name: "city name",
-            city_details: {
-              size: "size of city",
-              exports: "major exports",
+            CityName: "city name",
+            CityDetails: {
+              Size: "size of city",
+              Exports: "major exports",
             }
           }
         ],
