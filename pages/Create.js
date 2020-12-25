@@ -1,22 +1,24 @@
 import React from 'react';
 import CreateWorld from '../components/createWorld.js';
-import CreateRegion from '../components/createRegion.js';
-import CreateCity from '../components/createCity.js';
+// import CreateRegion from '../components/createRegion.js';
+// import CreateCity from '../components/createCity.js';
 import useForm from '../components/CustomHooks.js';
 import Layout from '../components/layout.js';
 import axios from 'axios';
 
-export default function Form({done, prev, form = 1, newRegion, newCity}) {
+export default function Form({}) {
 //callback function for useForm hook
 const signup = () => {
   // alert(`${inputs.worldName} has been saved`)
   var world = inputs;
+
+  //post to mongoDB database eventually
   axios.post('http://localhost:4321/worlds', world)
   .then((res) => {
-    console.log("form.jsx axios post: ", world);
-    done();
-    // window.location.reload(false);
+    // console.log("form.jsx axios post: ", world);
     // console.log(res);
+    // window.location.reload(false);
+    // done();
   })
   .catch((err) => {
     console.error('--> jeepers: ', err);
@@ -26,65 +28,13 @@ const signup = () => {
 //initializes the custom form hook
 const {inputs, handleInputChange, handleSubmit} = useForm(signup);
 
-
-  if (form <=1) {
-    return (
+return (
       <Layout>
         <CreateWorld 
-          prev={prev}
-          newCity={newCity}
-          newRegion={newRegion}
           inputs={inputs}
           handleInputChange={handleInputChange}
           handleSubmit={handleSubmit}/>
       </Layout>
     );
-  } else if (form === 2) {
-    return (
-
-      <div className="container">
-        <center>
-            <F2 
-              prev={prev}
-              newCity={newCity}
-              newRegion={newRegion}
-              inputs={inputs}
-              handleInputChange={handleInputChange}
-              handleSubmit={handleSubmit}/>
-        </center>
-      </div>
-
-    );
-  } else if (form === 3) {
-    return (
-
-      <div className="container">
-        <center>
-            <F3 
-              prev={prev}
-              newCity={newCity}
-              newRegion={newRegion}
-              inputs={inputs}
-              handleInputChange={handleInputChange}
-              handleSubmit={handleSubmit}/>
-        </center>
-      </div>
-
-    );
-  } else {
-
-    return (
-
-      <div className="container">
-      <center>
-          {/* <Results 
-            inputs={inputs}
-          /> */}
-      </center>
-    </div>
-
-    );
-
-  }
 
 }
