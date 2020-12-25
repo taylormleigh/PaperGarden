@@ -4,8 +4,6 @@ import Link from 'next/link';
 import worlds from '../database/testAPI';
 
 export default function NewWorld({newRegion, inputs, handleInputChange, handleSubmit}) {
-  console.log(inputs);
-
   let worldObj = {
     WorldName: inputs.WorldName,
     WorldDetails: {
@@ -17,23 +15,19 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
     WorldRegions: []
   }
 
-  console.log(worldObj);
-
-  const addWorld = (newWorldObj) => {
-    newWorldObj["worldID"] = worlds.length-1;
-    worlds.push(newWorldObj);
+  const addWorld = (event) => {
+    alert('added!');
+    worlds.push(worldObj);
     return;
   }
 
   return (
-    <>
-
     <div id="F1">
       <h1>NEW WORLD</h1>
       <h3>Fill out as much or as little as you like; your world can be edited later.</h3>
       <br />
 
-      <form>
+      <form onSubmit={addWorld}>
 
         <label>Name your world</label>
         <br />
@@ -90,16 +84,12 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
 
 
 
-
         <br />
         {/* <Link href="/CreateRegion"><button>NEW REGION</button></Link> */}
-        <Link href="/MyWorlds">
-          <button type="submit" onClick={addWorld(worldObj)}>DONE</button>
-        </Link>
-
+        {/* <Link href="/MyWorlds"> */}
+          <button type="submit" value="Submit">DONE</button>
+        {/* </Link> */}
       </form>
-
     </div>
-    </>
   );
 }
