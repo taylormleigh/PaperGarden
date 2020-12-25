@@ -15,7 +15,7 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
     WorldRegions: []
   }
 
-  const addWorld = (event) => {
+  const addWorld = () => {
     alert('Added!')
     worlds.push(worldObj);
     return ;
@@ -35,7 +35,6 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
           name="WorldName" 
           placeholder="world name"
           onChange={handleInputChange} 
-          // value={inputs["World Name"]}
           ></input>
         <br />
         <h2>PLANET</h2>
@@ -51,11 +50,11 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
         <br />
         What are the seasons?
         <br />
-        <textarea name="Seasons" placeholder="and how long does each season last?" onChange={handleInputChange}></textarea>
+        <textarea name="Seasons" placeholder="Does it vary by region? How long does each season last?" onChange={handleInputChange}></textarea>
         <br />
         How many suns & moons?
         <br />
-        <input name="Satellites" placeholder="do the satellites have names?" onChange={handleInputChange}></input>
+        <textarea name="Satellites" placeholder="Do these celestial bodies have names or special meaning to the inhabitants of your planet?" onChange={handleInputChange}></textarea>
         <br />
         {/* <br />
         <h2>LOGIC</h2>
