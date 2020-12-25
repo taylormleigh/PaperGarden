@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Layout from './layout.js';
 import Link from 'next/link';
 import worlds from '../database/testAPI';
@@ -16,9 +16,9 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
   }
 
   const addWorld = (event) => {
-    alert('added!');
+    alert('Added!')
     worlds.push(worldObj);
-    return;
+    return ;
   }
 
   return (
@@ -86,9 +86,9 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
 
         <br />
         {/* <Link href="/CreateRegion"><button>NEW REGION</button></Link> */}
-        {/* <Link href="/MyWorlds"> */}
+        <Link href="/MyWorlds">
           <button type="submit" value="Submit">DONE</button>
-        {/* </Link> */}
+        </Link>
       </form>
     </div>
   );
