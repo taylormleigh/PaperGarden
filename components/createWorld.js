@@ -1,32 +1,38 @@
-import React, { Fragment } from 'react';
-import Layout from './layout.js';
+import React from 'react';
 import Link from 'next/link';
 import worlds from '../database/testAPI';
+import { GET_ALL_QUESTIONS } from '../database/graphql-queries'
+import { useQuery, useMutation } from "@apollo/react-hooks";
 
-export default function NewWorld({inputs, handleInputChange, handleSubmit}) {
-  let worldObj = {
-    WorldName: inputs.WorldName,
-    WorldDetails: {
-      Revolution: inputs.Revolution,
-      Rotation: inputs.Rotation,
-      Seasons: inputs.Seasons,
-      Satellites: inputs.Satellites,
-    },
-    WorldRegions: []
-  }
+//import mongoDB SDK
+// import * as Realm from 'realm-web';
 
-  const addWorld = () => {
-    alert('Added!')
-    worlds.push(worldObj);
-    return ;
-  }
+//connect to Realm app
+// const REALM_APP_ID = "papergarden-wsdfd";
+// const app = new Realm.App({ id: REALM_APP_ID });
+
+
+export default function NewWorld({inputs, handleInputChange, handleSubmit }) {
+  //get all questions
+  const { loading, error, data } = useQuery(GET_ALL_QUESTIONS);
+
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
 
   return (
     <>
-    (Map through questions obj in database)
-    {
-
-    }
+      (Map through and display questions in section)
+      {
+        data.questions.map((question) => {
+          console.log('mapping')
+          //if type is input
+          
+          //if type is textarea
+          
+          //if type is dropdown
+          
+        })
+      }
     </>
   );
 }
