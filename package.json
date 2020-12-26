@@ -25,6 +25,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hook-form": "^5.4.2",
+    "realm": "^10.1.2",
     "realm-web": "^1.1.0"
   }
 }
