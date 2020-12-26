@@ -7,7 +7,6 @@ export default function MyWorlds(props) {
   return (
     <Layout>
         <h1>My Worlds</h1>
-
           <WorldList/>
     </Layout>
   )
