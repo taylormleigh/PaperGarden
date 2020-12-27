@@ -19,16 +19,17 @@ export default function NewWorld({inputs, handleInputChange, handleSubmit}) {
 
   // console.log(data);
 
-
+  
   axios({
     method: 'GET',
     url: 'https://realm.mongodb.com/api/client/v2.0/app/papergarden-wsdfd/graphql'
   })
   .then((res) => {
     console.log('results: ', res.data);
+    let data = res.data;
   })
   .catch((err) => {
-    console.error(err);
+    console.error("jinkies! --> ", err.message);
   })
 
   return (
