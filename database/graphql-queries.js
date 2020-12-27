@@ -5,13 +5,12 @@ import { gql } from 'apollo-boost';
 export const GET_ALL_QUESTIONS = gql`
   query {
     question {
-      _id
+      sectionName
       questions {
         placeholder
         question
         type
       }
-      sectionName
     }
   }  
 `;

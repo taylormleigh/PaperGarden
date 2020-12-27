@@ -23,15 +23,14 @@ export default function NewWorld({inputs, handleInputChange, handleSubmit }) {
     <>
       (Map through and display questions in section)
       {
-        data.questions.map((question) => {
-          console.log('mapping')
+        data.sectionName
           //if type is input
           
           //if type is textarea
           
           //if type is dropdown
           
-        })
+      
       }
     </>
   );
