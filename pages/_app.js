@@ -51,7 +51,6 @@ export const client = new ApolloClient({
 });
 
 
-
 export default function MyApp({ Component, pageProps }) {
   // Keep the logged in Realm user in local state. This lets the app re-render
   // whenever the current user changes (e.g. logs in or logs out).
