@@ -177,3 +177,11 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.08);
   height: 30px;
 }
+
+/* on mobile devices */
+@media only screen and (max-width: 350px) {
+  .headerButton {
+    font-size: 9vw;
+  }
+
+}
