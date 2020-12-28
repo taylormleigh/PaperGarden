@@ -20,7 +20,7 @@ const signup = () => {
   // .catch((err) => {
   //   console.error('--> jeepers: ', err);
     // alert("There was a problem adding your world, make sure it doesn't have the same name as a previously created world");
-  })
+  // })
 }
 //initializes the custom form hook
 const {inputs, handleInputChange, handleSubmit} = useForm(signup);
