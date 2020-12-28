@@ -3,7 +3,7 @@ import { gql } from 'apollo-boost';
 // import { useQuery, useMutation } from "@apollo/react-hooks";
 
 export const GET_ALL_QUESTIONS = gql`
-  query {
+  query getAllQuestions {
     question {
       sectionName
       questions {
