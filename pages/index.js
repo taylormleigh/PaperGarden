@@ -16,7 +16,7 @@ export default function Home({newWorld}) {
 
           <p />Paper & Garden is a web service that assists storytellers in developing their setting. Whether you're designing a story or planting it, your locations can be as rich as characters. Each region and city has a unique personality that interacts with your story and the people within it. Help to maintain consistency by saving the details of those places here for easy reference.
 
-          <p/>Currently this demo is not fully functioning as of 12/2020 due to database moves. Please check back soon, as the site's author does intend to implement the functionality once again.
+          <p/>**Currently this demo is not fully functioning as of 12/2020 due to database migration. Please check back soon, as the site's author does intend to implement the functionality once again.
 
           <p /><Link href="/Create"><button className="headerButton">BEGIN</button></Link>
           <p />
