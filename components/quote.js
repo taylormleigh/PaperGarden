@@ -20,8 +20,8 @@ export default function Quote() {
 
   return (
     <div id="quote">
-      {quotes[random]}
-      {/* {quotes[quotes.length-1]} */}
+      {/* {quotes[random]} */}
+      {quotes[quotes.length-1]}
     </div>
   )
 }
