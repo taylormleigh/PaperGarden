@@ -1,19 +1,17 @@
-// import gql from "graphql-tag";
-import { gql } from 'apollo-boost';
-// import { useQuery, useMutation } from "@apollo/react-hooks";
 
-export const GET_ALL_QUESTIONS = gql`
-  query getAllQuestions {
-    question {
+
+export const GET_ALL_QUESTIONS = `
+  query {
+    questions {
       sectionName
       questions {
-        placeholder
         question
+        placeholder
         type
       }
     }
-  }  
-`;
+  }
+}`;
 
 // export const UPDATE_MOVIE = gql`
 //   mutation UpdateMovie($query: MovieQueryInput!, $set: MovieUpdateInput!) {
