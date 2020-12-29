@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import useSWR from 'swr';
-import { generateAuthHeader, REALM_GRAPHQL_ENDPOINT } from './RealmClient';
-import { GET_ALL_QUESTIONS } from '../database/graphql-queries'
+import { generateAuthHeader, REALM_GRAPHQL_ENDPOINT} from './RealmClient';
+import { GET_ALL_QUESTIONS } from '../database/graphql-queries';
 
 const fetcher = async (query) => {
   fetch(REALM_GRAPHQL_ENDPOINT, {
@@ -23,7 +23,7 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
 
   if (error) {
     console.error(error)
-    return <div id="F1">Error!</div>;
+    return <div id="F1">useSWR Error!</div>;
   }
 
   const questions = data ? data.data.questions : null;

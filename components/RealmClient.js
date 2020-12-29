@@ -14,8 +14,7 @@ export const generateAuthHeader = async () => {
     await app.logIn(Credentials.anonymous())
   }
   // Get a valid access token for the current user
-  const { accessToken } = app.currentUser
-
+  const { accessToken } = app.currentUser;
   // Set the Authorization header, preserving any other headers
   return {
     Authorization: `Bearer ${accessToken}`,
