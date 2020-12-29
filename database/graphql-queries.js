@@ -1,7 +1,7 @@
 
 
 export const GET_ALL_QUESTIONS = `
-  query {
+  query getQuestions {
     questions {
       sectionName
       questions {
@@ -10,8 +10,7 @@ export const GET_ALL_QUESTIONS = `
         type
       }
     }
-  }
-}`;
+  }`;
 
 // export const UPDATE_MOVIE = gql`
 //   mutation UpdateMovie($query: MovieQueryInput!, $set: MovieUpdateInput!) {
