@@ -1,9 +1,31 @@
 import React from 'react';
-import Layout from './layout.js';
 import Link from 'next/link';
-import worlds from '../database/testAPI';
+import useSWR from 'swr';
+import { generateAuthHeader, REALM_GRAPHQL_ENDPOINT } from './RealmClient';
+import { GET_ALL_QUESTIONS } from '../database/graphql-queries'
+
+const fetcher = async (query) => {
+  fetch(REALM_GRAPHQL_ENDPOINT, {
+    method: 'POST',
+    headers: await generateAuthHeader(),
+    body: JSON.stringify({ query }),
+  }).then((res) => res.json()).catch((err) => console.error('jinkies! ', err))
+}
+
+
+
 
 export default function NewWorld({newRegion, inputs, handleInputChange, handleSubmit}) {
+
+  const {data} = useSWR(GET_ALL_QUESTIONS, fetcher)
+
+  if (data && data.error) {
+    console.error(data.error)
+    return <>Error!</>;
+  }
+
+  const questions = data ? data.data.questions : null;
+  console.log(questions);
 
   const addWorld = (event) => {
     alert('added!');
@@ -12,44 +34,7 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
 
   return (
     <div id="F1">
-      <h1>NEW WORLD</h1>
-      <h3>Fill out as much or as little as you like; your world can be edited later.</h3>
-      <br />
-
-      <form onSubmit={addWorld}>
-
-        <label>Name your world</label>
-        <br />
-        <input 
-          name="WorldName" 
-          placeholder="world name"
-          onChange={handleInputChange} 
-          ></input>
-        <br />
-        <h2>PLANET</h2>
-        <br />
-        <br />
-        How many days are in the year?
-        <br />
-        <input name="Revolution" placeholder="revolution" onChange={handleInputChange}></input>
-        <br />
-        How many hours are in a day?
-        <br />
-        <input name="Rotation" placeholder="rotation" onChange={handleInputChange}></input>
-        <br />
-        What are the seasons?
-        <br />
-        <textarea name="Seasons" placeholder="and how long does each season last?" onChange={handleInputChange}></textarea>
-        <br />
-        How many suns & moons?
-        <br />
-        <input name="Satellites" placeholder="do the satellites have names?" onChange={handleInputChange}></input>
-        <br />
-        <br />
-        <Link href="/MyWorlds">
-          <button type="submit" value="Submit">DONE</button>
-        </Link>
-      </form>
+      Map through questions
     </div>
   );
 }
