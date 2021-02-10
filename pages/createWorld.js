@@ -9,6 +9,8 @@ export default function NewWorld({}){
     return (
       <Layout>
       <div id="F1">
+        <h1>*DEMO VERSION IS NOT CURRENTLY ATTACHED TO A DATABASE</h1>
+        <h2>Please check back soon for full functionality of this web app</h2>
         <h1>NEW WORLD</h1>
         <h3>Fill out as much or as little as you like; your world can be edited later.</h3>
         <br />
