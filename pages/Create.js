@@ -27,10 +27,10 @@ const {inputs, handleInputChange, handleSubmit} = useForm(signup);
 
 return (
       <Layout>
-        <CreateWorld 
-          inputs={inputs}
-          handleInputChange={handleInputChange}
-          handleSubmit={handleSubmit}/>
+        // <CreateWorld 
+        //   inputs={inputs}
+        //   handleInputChange={handleInputChange}
+        //   handleSubmit={handleSubmit}/>
       </Layout>
     );
 
