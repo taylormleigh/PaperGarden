@@ -4,6 +4,7 @@ import useSWR from 'swr';
 import { generateAuthHeader, REALM_GRAPHQL_ENDPOINT} from './RealmClient';
 import { GET_ALL_QUESTIONS } from '../database/graphql-queries';
 
+
 const fetcher = async (query) => {
   fetch(REALM_GRAPHQL_ENDPOINT, {
     method: 'POST',
@@ -20,7 +21,7 @@ export default function NewWorld({newRegion, inputs, handleInputChange, handleSu
 
   const {data, error} = useSWR(GET_ALL_QUESTIONS, fetcher)
   console.log(data)
-
+ 
   if (error) {
     console.error(error)
     return <div id="F1">useSWR Error!</div>;
