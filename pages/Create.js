@@ -1,9 +1,9 @@
 import React from 'react';
-import CreateWorld from '../components/createWorld.js';
+// import CreateWorld from './createWorld.js';
 import useForm from '../components/CustomHooks.js';
 import Layout from '../components/layout.js';
 
-export default function Form({}) {
+export default class Form() {
 //callback function for useForm hook
 const signup = () => {
   // alert(`${inputs.worldName} has been saved`)
