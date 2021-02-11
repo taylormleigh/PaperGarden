@@ -18,7 +18,7 @@ export default function Home({newWorld}) {
 
           <p/>**Currently this demo is not fully functioning as of 12/2020 due to database migration. Please check back soon, as the site's author does intend to implement the functionality once again.
 
-          <p /><Link href="/Create"><button className="headerButton">BEGIN</button></Link>
+          <p /><Link href="/createWorld"><button className="headerButton">BEGIN</button></Link>
           <p />
       </div>
     </Layout>
