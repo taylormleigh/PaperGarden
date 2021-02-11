@@ -4,11 +4,7 @@
 ![logo](public/builderlogo.png)
 
 ### Introduction
-This project was a brief two-day sprint where I created the minimum viable product for an app of my own conception.
-
-I decided to create an app for storytellers (novelists, screenwriters, etc.) to assist in world-building. I pared down the idea to the simplest idea waiting behind all of the scalable potential and began work. Though the timeline was rushed, I wanted to use this project as an opportunity to explore features new to me using raw React and CSS rather than utilizing libraries.
-
-What I was able to complete in two days was a full-stack web application that takes in input about a fictional world and saves the information to a user's account.
+This ongoing personal project is an app for storytellers (novelists, screenwriters, etc.) to assist in world-building. I wanted to use this project as an opportunity to explore features new to me using raw React and CSS rather than utilizing libraries. Paper & Garden is a full-stack web application that takes in input about a fictional world and saves the information to a user's account.
 
 ### What does the app do?
 * Paper & Garden offers a user-friendly way to develop fictional worlds.
@@ -18,16 +14,16 @@ What I was able to complete in two days was a full-stack web application that ta
 ### Tech stack
 * Language: JavaScript
 * Client: React, CSS
-* Server: Express, Node.js
+* Server: Originally Express & Node.js, but have since moved into a serverless direction using Vercel deployment
 * Database: mySQL
 
 ### Challenges
 * I learned how to use React hooks and specifically how to create custom hooks to create a fully-functional form without utilizing a pre-made library.
-* I designed a SQL database that would be scalable with my stretch goals, yet I did it quickly enough to meet the two-day deadline.
-* I wanted to make the forms fully functional, but I had to pare down my concept. However, I fully designed a MySQL database to be able to accomodate future functionality.
+* I designed a SQL database that would be scalable with my stretch goals.
+* In December 2020 I had to reasses my database hosting. However, I fully designed a MySQL database to be able to accomodate future functionality.
 
 ### Minimum Viable Product:
-* User can submit data and retrieve that data
+* User can submit data and retrieve that data (null as of December 2020)
 * Front end is accessible and responsive
 * Back end is set up for future scalability
 
@@ -42,15 +38,16 @@ What I was able to complete in two days was a full-stack web application that ta
 * When the user submits a form, the information about the world they create is saved to a mySQL database.
 
 ### Required Research
-* Though the project was to accomplish the MVP of the concept, I will be using a Feature Branch Workflow as it evolves.
+* Though the original project was to accomplish the MVP of the concept, I will be using a Feature Branch Workflow as it evolves.
 * I implement Agile Practices to organize and execute this project.
-* User stories, completed tickets, and stretch goals can be accessed at Paper & Garden's [Trello](https://trello.com/b/IzHFL3UD/papergarden)
 
 ### Future Plans
-What additional features do you plan to add, how do you plan to implement those features?
 * Full form functionality with increased usability (accordion drawer designs, etc)
 * Unique user accounts
 * Stress-Testing and prepping for increased traffic as features evolve
-* Additional features, such as character-building, plot development, utilizing APIs to autofill geographic information, and more.
-* Sharpening the usability of the interface.
-* Deployment to AWS via Elastic Beanstalk using Docker.
+* Sharpening the usability of the interface
+* Users are able to edit their worlds after submission
+* Input pulls in information from a natural resources API and auto-fills flora, fauna, weather information, etc.
+* Users are able to share their worlds, to editors, background artists, illustrators, DMs, etc.
+* Sister apps for character development and plot development that integrate with the world storytellers have created
+* And much more!
