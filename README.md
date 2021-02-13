@@ -6,8 +6,7 @@
 ### Introduction
 This ongoing personal project is an app for storytellers (novelists, screenwriters, etc.) to assist in world-building. I wanted to use this project as an opportunity to explore features new to me using raw React and CSS rather than utilizing libraries. Paper & Garden is a full-stack web application that takes in input about a fictional world and saves the information to a user's account.
 
-### Live Demo
-[http://papergarden.tay-made.com]
+### [Live Demo](http://papergarden.tay-made.com)
 
 ### What does the app do?
 * Paper & Garden offers a user-friendly way to develop fictional worlds.
@@ -16,8 +15,8 @@ This ongoing personal project is an app for storytellers (novelists, screenwrite
 
 ### Tech stack
 * Language: JavaScript
-* Client: React, CSS
-* Server: Originally Express & Node.js, but have since moved into a serverless direction using Vercel deployment
+* Client: React, CSS, Next.js
+* Server: ~~Express, Node.js~~ have since changed to be serverless with a Vercel deployment
 * Database: mySQL
 
 ### Challenges
@@ -26,7 +25,7 @@ This ongoing personal project is an app for storytellers (novelists, screenwrite
 * In December 2020 I had to reasses my database hosting. However, I fully designed a MySQL database to be able to accomodate future functionality.
 
 ### Minimum Viable Product:
-* User can submit data and retrieve that data (null as of December 2020)
+* ~~User can submit data and retrieve that data~~ (temporarily null as of December 2020)
 * Front end is accessible and responsive
 * Back end is set up for future scalability
 
