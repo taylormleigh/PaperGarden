@@ -16,7 +16,7 @@ This ongoing personal project is an app for storytellers (novelists, screenwrite
 ### Tech stack
 * Language: JavaScript
 * Client: React, CSS, Next.js
-* Server: ~~Express, Node.js~~ have since changed to be serverless with a Vercel deployment
+* Server: ~~Express, Node.js~~ changed to be serverless for a Vercel deployment
 * Database: mySQL
 
 ### Challenges
