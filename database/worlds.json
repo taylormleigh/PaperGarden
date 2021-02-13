@@ -1,0 +1,88 @@
+[
+    {
+      "user_id": "123",
+      "worldName" : "testWorld123",
+      "worldDetails": [
+        {
+          "Planet": [
+            {
+              "Q": "Name your world",
+              "A": "testWorld123"
+            },
+            {
+              "Q": "How many days are in the year?",
+              "A": "300"
+            },
+            {
+              "Q": "How many hours are in a day?",
+              "A": "60"
+            },
+            {
+              "Q": "What are the seasons?",
+              "A": "Summer and Winter, each lasts half the year"
+            },
+            {
+              "Q": "How many suns & moons?",
+              "A": "one sun and no moons -- the sun is referred to as 'Ra' and worshipped and feared."
+            }
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "regionName": "region1",
+          "regionDetails": [
+            {
+              "Geography": [
+                {
+                  "Q": "Name your Region",
+                  "A": "region1"
+                },
+                {
+                  "Q": "Where is this region located within your world?",
+                  "A": "northernmost point of the planet"
+                },
+                {
+                  "Q": "What type of habitat is it?",
+                  "A": "tundra"
+                },
+                {
+                  "Q": "What is the climate?",
+                  "A": "dry and below freezing"
+                },
+                {
+                  "Q": "What is unique about the weather in this region?",
+                  "A": "the auroran lights light up the sky"
+                },
+                {
+                  "Q": "What are the most notable points of geography?",
+                  "A": "largest peak in the world, Mount Bigboi"
+                }
+              ]
+            }
+          ],
+          "cities": [
+            {
+              "cityName": "cityville",
+              "cityDetails": [
+                {
+                  "Flora & Fauna": [
+                    {
+                      "Q": "What are the richest natural resources of this area?",
+                      "A": "ice / water"
+                    },
+                    {
+                      "Q": "What resources are most scarce?",
+                      "A": "fertile land"
+                    }
+                  ]
+                },
+                
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  
+]
